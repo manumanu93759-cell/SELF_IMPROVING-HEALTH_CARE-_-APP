@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Health AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="hero-header">
+            <img src="health_hero.png" alt="AI Brain and Heart" class="hero-image">
+            <h1>Nexus Health AI</h1>
+            <p class="subtitle">Next-gen biomonitoring driven by artificial intelligence.</p>
+        </div>
+
+        <div class="card">
+            <h2><img src="mood_icon.png" style="width:30px; vertical-align:middle; margin-right:10px;">Daily Biometrics</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <img src="sleep_icon.png" class="metric-icon">
+                    <label>Sleep (Hours)</label>
+                    <input type="number" id="sleep" placeholder="7.5">
+                </div>
+                
+                <div class="metric-card">
+                    <img src="water_icon.png" class="metric-icon">
+                    <label>Hydration (L)</label>
+                    <input type="number" id="water" placeholder="2.0">
+                </div>
+                
+                <div class="metric-card">
+                    <img src="steps_icon.png" class="metric-icon">
+                    <label>Daily Steps</label>
+                    <input type="number" id="steps" placeholder="10000">
+                </div>
+                
+                <div class="metric-card">
+                    <img src="heart_icon.png" class="metric-icon">
+                    <label>Heart Rate (BPM)</label>
+                    <input type="number" id="heart" placeholder="65">
+                </div>
+
+                <div class="metric-card mood-card">
+                    <img src="mood_icon.png" class="metric-icon">
+                    <label>How is your day?</label>
+                    <div class="mood-selector">
+                        <label><input type="radio" name="mood" value="Terrible"> 😭</label>
+                        <label><input type="radio" name="mood" value="Bad"> 🙁</label>
+                        <label><input type="radio" name="mood" value="Okay"> 😐</label>
+                        <label><input type="radio" name="mood" value="Good" checked> 🙂</label>
+                        <label><input type="radio" name="mood" value="Amazing"> 🤩</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="analyzeHealth()">Analyze with AI Core</button>
+        </div>
+
+        <div class="card">
+            <h2>AI Core Evaluation</h2>
+            <div id="loading" style="display:none; text-align:center;">
+                <div class="loader">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <p style="color:#4facfe; margin-top:5px; font-weight:600;">AI is assembling insights...</p>
+            </div>
+            
+            <div id="evaluation-container">
+                <div class="score-circle">
+                    <span id="score-display">--/10</span>
+                    <p style="margin:0; font-size:12px; color:#94a3b8">AI Rating</p>
+                </div>
+                <p id="result">Waiting for biometric sync...</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Evolution Log</h2>
+            <ul id="log"></ul>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
