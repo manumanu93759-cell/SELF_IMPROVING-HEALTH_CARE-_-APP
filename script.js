@@ -1,5 +1,5 @@
 async function analyzeHealth() {
-    const apiKey = "AIzaSyDdY79gGVGToLvo7iCHdxDnAoIHD6I0i-Q";
+    const apiKey = "AIzaSyB0PbGBNZqmRuCnMzbT_jo7FBIteGD51KM";
     let sleep = document.getElementById("sleep").value;
     let water = document.getElementById("water").value;
     let steps = document.getElementById("steps").value;
